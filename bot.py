@@ -27,6 +27,7 @@ import uuid
 import discord
 from discord.ext import commands
 import json5
+import pyrcb2
 
 BASE_DIR = os.path.dirname(__file__)
 
@@ -132,7 +133,7 @@ class SkyArrowDiscordBot(commands.Bot):
 class SkyArrowIrcBot:
 	def __init__(self, config, *, loop=None):
 		self.config = config
-		self.bot = IRCBot(log_communication=True, loop=loop)
+		self.bot = pyrcb2.IRCBot(log_communication=True, loop=loop)
 		self.bot.load_events(self)
 
 	async def start(self):
