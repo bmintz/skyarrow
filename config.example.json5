@@ -1,0 +1,42 @@
+{
+	irc: {
+		hostname: 'chat.freenode.net',
+		port: 6697,
+		serverpass: null,
+		tls: true,
+
+		sasl: {
+			// TODO figure out the schema for this section
+		},
+
+		// prefix for all commands within IRC. If not specified, IRC commands will be disabled.
+		prefix: null,
+
+		// array of strings to run after logging in
+		// this can be used to authenticate with NickServ, for example
+		startup_commands: [],
+	},
+
+	discord: {
+		// prefix for all commands within Discord. if not specified, defaults to @mention only.
+		prefix: null,
+
+		token: '',
+
+		// discord channel -> webhook URL
+		// discord channels can be specified by ID (integer) or by #name
+		// if a webhook is not specified for a discord channel, the bot will speak in that channel.
+		// if a webhook is specified for a channel, messages will appear to come from discord users,
+		// and avatars will be picked up
+		webhooks: {
+		},
+	},
+
+	// discord -> irc
+	// discord channels can be specified by ID (integer) or by #name
+	// each IRC channel will be joined, and the bot will speak via that channel.
+	// each Discord channel will be bridged.
+	channels: {
+		'#mybot': '#mybot',
+	},
+}
