@@ -1,6 +1,6 @@
 # Skyarrow
 
-A Discord <-> IRC bridge implemented in Python, using asyncio, irc3, and discord.py.
+A Discord <-> IRC bridge implemented in Python, using asyncio, pyrcb2, and discord.py.
 
 ## License
 
