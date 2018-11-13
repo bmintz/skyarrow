@@ -141,3 +141,9 @@ class SkyArrowIrcBot:
 		await self.bot.register_async(self.config['name'])
 		for channel in self.config['channels']:
 			await self.bot.join(channel)
+
+if __name__ == '__main__':
+	with open(os.path.join(BASE_DIR, 'config.json5')) as f:
+		config = json5.load(f)
+	bot = SkyArrow(config)
+	bot.run()
